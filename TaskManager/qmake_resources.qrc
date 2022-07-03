@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/TaskManager">
+<file alias="main.qml">/home/djose1164/QtProjects/TaskManager/main.qml</file>
+</qresource>
+</RCC>
