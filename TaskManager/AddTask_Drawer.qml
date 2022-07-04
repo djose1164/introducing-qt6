@@ -37,7 +37,7 @@ Drawer {
         TextField {
             id: dateInput
             height: parent.height
-            width: parent.width/2.5
+            width: parent.width/1.5
             anchors.left: parent.left
             placeholderText: "0000-00-00"
         }
@@ -45,7 +45,7 @@ Drawer {
         TextField {
             id: timeInput
             height: parent.height
-            width: parent.width/3
+            width: parent.width/2.8
             anchors.right: parent.right
             placeholderText: "00:00"
         }
