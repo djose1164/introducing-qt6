@@ -5,7 +5,7 @@ ApplicationWindow {
     width: 360
     height: 640
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Hang-Man")
 
     StackView {
         id: contentFrame
