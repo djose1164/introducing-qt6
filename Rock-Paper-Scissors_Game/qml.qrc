@@ -11,5 +11,7 @@
         <file>images/paper.png</file>
         <file>images/scissor.png</file>
         <file>images/rock.png</file>
+        <file>images/win.png</file>
+        <file>Database.js</file>
     </qresource>
 </RCC>

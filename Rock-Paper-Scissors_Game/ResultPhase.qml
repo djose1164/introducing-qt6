@@ -2,7 +2,16 @@ import QtQuick
 import QtQuick.Controls
 
 Item {
-    anchors.fill: parent
+
+    Label {
+        anchors.top: parent.top
+        anchors.topMargin: 100
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: "Click the Icon"
+        font.bold: true
+        font.pointSize: 15
+        color: "white"
+    }
 
     MouseArea {
         anchors.centerIn: parent
@@ -27,7 +36,8 @@ Item {
         anchors.bottomMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
         color: "white"
-        text: "Win:: "+ winCount +" | "+ losCount+" ::Loss"
+        text: "Win:: "+ winCount +" | "+ lossCount+" ::Loss"
+        font.pointSize: 25
         font.bold: true
     }
 
@@ -64,15 +74,5 @@ Item {
             console.log("## Error at getImage()");
             break;
         }
-    }
-
-    /*
-        Reset all the properties used in the game.
-    */
-    function resetAllProperties()
-    {
-        winState = 0
-        playerOption = ""
-        botOption = ""
     }
 }

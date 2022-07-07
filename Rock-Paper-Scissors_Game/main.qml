@@ -1,14 +1,16 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.LocalStorage
+import "Database.js" as JS
 
-Window {
+ApplicationWindow {
     width: 360
     height: 640
     visible: true
     title: "Rock-Paper-Scissors"
 
-    property int winCount: 0
-    property int lossCount: 0
+    property int winCount: JS.dbGet("playerWin")
+    property int lossCount: JS.dbGet("playerLoss")
 
     SwipeView {
         id: swipeView
@@ -27,5 +29,27 @@ Window {
         EndPage {
             id: endPage
         }
+    }
+
+    Component.onCompleted:
+        JS.dbInit()
+
+    /*
+        Reset all the properties used in the game.
+    */
+    function resetAllProperties()
+    {
+        winState = 0;
+        playerOption = "";
+        botOption = "";
+    }
+
+    /*
+      Save the values of the counters to dabase.
+    */
+    function saveResultsToDatabase()
+    {
+        JS.dbUpdate("playerWin", winCount)
+        JS.dbSet("playerLoss", lossCount)
     }
 }
